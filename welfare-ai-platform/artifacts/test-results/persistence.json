@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "prepared_at": "2026-09-20T15:07:42.995666+00:00",
+  "checked_at": "2026-09-20T15:08:52.996431+00:00",
+  "checks": [
+    "server session and profile",
+    "private file SHA256",
+    "chat history",
+    "real cited local retrieval after restart"
+  ]
+}

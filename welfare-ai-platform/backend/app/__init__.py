@@ -1,0 +1,1 @@
+"""Welfare Scheme Assistant backend."""

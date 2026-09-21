@@ -1,0 +1,13 @@
+$ playwright test
+
+Running 5 tests using 1 worker
+
+(node:2124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\journeys.spec.js:31:1 › registration, incomplete profile, correction and explained recommendation (2.6s)
+  ok 2 e2e\journeys.spec.js:47:1 › real PDF upload, mismatch correction, readiness, export and deletion (5.2s)
+  ok 3 e2e\journeys.spec.js:78:1 › real local cited retrieval, unsupported question and personal eligibility (17.8s)
+  ok 4 e2e\journeys.spec.js:96:1 › recoverable profile failure preserves input and narrow screen stays usable (1.1s)
+  ok 5 e2e\journeys.spec.js:112:1 › admin edits and archives are reflected in citizen catalog (2.4s)
+
+  5 passed (33.3s)

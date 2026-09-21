@@ -1,0 +1,12 @@
+$ vitest run --configLoader native "--reporter=default" "--reporter=junit" "--outputFile=../artifacts/test-results/frontend.xml"
+
+ RUN  v4.1.11 C:/Users/vamsi/Documents/Codex/2026-09-20/act-as-a-senior-prompt-engineer/welfare-ai-platform/frontend
+
+ ✓ src/contracts.test.jsx (5 tests) 183ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  09:41:26
+   Duration  40.35s (transform 1.29s, setup 13.76s, import 2.33s, tests 183ms, environment 22.47s)
+
+JUNIT report written to C:/Users/vamsi/Documents/Codex/2026-09-20/act-as-a-senior-prompt-engineer/welfare-ai-platform/artifacts/test-results/frontend.xml

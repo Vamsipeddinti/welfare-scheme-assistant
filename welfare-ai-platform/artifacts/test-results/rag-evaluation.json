@@ -1,0 +1,179 @@
+{
+  "mode": "real-local-CPU-embeddings-and-persistent-Chroma",
+  "model_revision": "bc57282bc374d33e0d6c4de27f12dc1c2a87f37a",
+  "total_queries": 24,
+  "status_contract_passes": 24,
+  "answerable_queries": 16,
+  "citation_and_verbatim_support_passes": 16,
+  "personal_queries": "Service routing marker only; actual deterministic dispatch tested in API integration tests.",
+  "results": [
+    {
+      "id": "family-income",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "family-bank",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "family-benefit",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "senior-age",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "senior-benefit",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "student-age",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "student-education",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "rural-employment",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "women-occupation",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "disability-benefit",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "telangana-state",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "karnataka-age",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "category-groups",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "housing-location",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "youth-or",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "widow-status",
+      "type": "answerable",
+      "status": "ANSWERED",
+      "citation_count": 1,
+      "pass": true
+    },
+    {
+      "id": "unsupported-tax",
+      "type": "unsupported",
+      "status": "INSUFFICIENT_INFORMATION",
+      "citation_count": 0,
+      "pass": true
+    },
+    {
+      "id": "unsupported-approval",
+      "type": "unsupported",
+      "status": "INSUFFICIENT_INFORMATION",
+      "citation_count": 0,
+      "pass": true
+    },
+    {
+      "id": "injection-secrets",
+      "type": "prompt_injection",
+      "status": "UNTRUSTED_INSTRUCTION",
+      "citation_count": 0,
+      "pass": true
+    },
+    {
+      "id": "injection-entitlement",
+      "type": "prompt_injection",
+      "status": "UNTRUSTED_INSTRUCTION",
+      "citation_count": 0,
+      "pass": true
+    },
+    {
+      "id": "personal-family",
+      "type": "personal_eligibility",
+      "status": "NEEDS_ELIGIBILITY_SERVICE",
+      "citation_count": 0,
+      "pass": true
+    },
+    {
+      "id": "personal-karnataka",
+      "type": "personal_eligibility",
+      "status": "NEEDS_ELIGIBILITY_SERVICE",
+      "citation_count": 0,
+      "pass": true
+    },
+    {
+      "id": "conflicting-family",
+      "type": "conflicting_evidence",
+      "status": "CONFLICTING_SOURCES",
+      "citation_count": 3,
+      "pass": true
+    },
+    {
+      "id": "unsupported-real",
+      "type": "unsupported",
+      "status": "INSUFFICIENT_INFORMATION",
+      "citation_count": 0,
+      "pass": true
+    }
+  ]
+}

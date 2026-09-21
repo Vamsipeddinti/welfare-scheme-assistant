@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:17.11-alpine
+    environment:
+      POSTGRES_USER: welfare
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/setup_env.py first}
+      POSTGRES_DB: welfare
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U welfare -d welfare']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  backend:
+    mem_limit: 4g
+    pids_limit: 256
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://welfare:${POSTGRES_PASSWORD}@postgres:5432/welfare
+      JWT_SECRET: ${JWT_SECRET:?Run scripts/setup_env.py first}
+      DEMO_MODE: ${DEMO_MODE:-false}
+      LLM_MODE: ${LLM_MODE:-local}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      UPLOAD_DIR: /app/runtime/uploads
+      CHROMA_DIR: /app/runtime/chroma
+      MODEL_DIR: /app/runtime/model
+      EMBEDDING_REVISION: bc57282bc374d33e0d6c4de27f12dc1c2a87f37a
+      CORS_ORIGINS: http://localhost:3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - uploads:/app/runtime/uploads
+      - vectors:/app/runtime/chroma
+      - model_cache:/app/runtime/model
+    ports:
+      - '127.0.0.1:${API_PORT:-8000}:8000'
+    command: [sh, -c, 'python -m alembic upgrade head && python -m app.cli seed && python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1']
+    healthcheck:
+      test: [CMD, python, -c, 'import urllib.request; urllib.request.urlopen("http://localhost:8000/api/health", timeout=3)']
+      interval: 10s
+      timeout: 5s
+      retries: 20
+  frontend:
+    build: ./frontend
+    ports:
+      - '127.0.0.1:${WEB_PORT:-3000}:80'
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  postgres_data:
+  uploads:
+  vectors:
+  model_cache:

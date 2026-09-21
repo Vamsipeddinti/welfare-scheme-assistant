@@ -1,0 +1,471 @@
+[
+  {
+    "username": "asha",
+    "email": "asha@example.test",
+    "scenario": "eligible",
+    "profile": {
+      "gender": "female",
+      "has_bank_account": true,
+      "employment_status": "employed",
+      "occupation": "tailor",
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "location_type": "urban",
+      "social_category": "obc",
+      "disability_status": false,
+      "education_level": "secondary",
+      "student_status": false,
+      "marital_status": "married",
+      "revision": 1,
+      "full_name": "Asha Rao",
+      "date_of_birth": "1988-04-12",
+      "annual_family_income": 120000
+    },
+    "evaluation_date": "2026-09-20",
+    "documents": [
+      {
+        "document_type": "identity_proof",
+        "fields": {
+          "full_name": "Asha Rao",
+          "date_of_birth": "1988-04-12"
+        },
+        "id": "fixture-1",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Asha Rao",
+            "document_value": "Asha Rao",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "date_of_birth",
+            "status": "MATCH",
+            "profile_value": "1988-04-12",
+            "document_value": "1988-04-12",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "income_certificate",
+        "fields": {
+          "full_name": "Asha Rao",
+          "annual_family_income": 120000
+        },
+        "id": "fixture-2",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Asha Rao",
+            "document_value": "Asha Rao",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "annual_family_income",
+            "status": "MATCH",
+            "profile_value": 120000,
+            "document_value": 120000,
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "residence_proof",
+        "fields": {
+          "full_name": "Asha Rao",
+          "state": "Telangana"
+        },
+        "id": "fixture-3",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Asha Rao",
+            "document_value": "Asha Rao",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "state",
+            "status": "MATCH",
+            "profile_value": "Telangana",
+            "document_value": "Telangana",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      }
+    ],
+    "expected": {
+      "scheme_id": "demo-family-support",
+      "eligibility": "ELIGIBLE",
+      "readiness": "READY",
+      "readiness_percentage": 100
+    }
+  },
+  {
+    "username": "ravi",
+    "email": "ravi@example.test",
+    "scenario": "ineligible",
+    "profile": {
+      "gender": "male",
+      "has_bank_account": true,
+      "employment_status": "employed",
+      "occupation": "engineer",
+      "state": "Tamil Nadu",
+      "district": "Chennai",
+      "location_type": "urban",
+      "social_category": "general",
+      "disability_status": false,
+      "education_level": "graduate",
+      "student_status": false,
+      "marital_status": "married",
+      "revision": 1,
+      "full_name": "Ravi Iyer",
+      "date_of_birth": "1986-06-18",
+      "annual_family_income": 900000
+    },
+    "evaluation_date": "2026-09-20",
+    "documents": [
+      {
+        "document_type": "identity_proof",
+        "fields": {
+          "full_name": "Ravi Iyer",
+          "date_of_birth": "1986-06-18"
+        },
+        "id": "fixture-1",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Ravi Iyer",
+            "document_value": "Ravi Iyer",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "date_of_birth",
+            "status": "MATCH",
+            "profile_value": "1986-06-18",
+            "document_value": "1986-06-18",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "income_certificate",
+        "fields": {
+          "full_name": "Ravi Iyer",
+          "annual_family_income": 900000
+        },
+        "id": "fixture-2",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Ravi Iyer",
+            "document_value": "Ravi Iyer",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "annual_family_income",
+            "status": "MATCH",
+            "profile_value": 900000,
+            "document_value": 900000,
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "residence_proof",
+        "fields": {
+          "full_name": "Ravi Iyer",
+          "state": "Tamil Nadu"
+        },
+        "id": "fixture-3",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Ravi Iyer",
+            "document_value": "Ravi Iyer",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "state",
+            "status": "MATCH",
+            "profile_value": "Tamil Nadu",
+            "document_value": "Tamil Nadu",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      }
+    ],
+    "expected": {
+      "scheme_id": "demo-family-support",
+      "eligibility": "NOT_ELIGIBLE",
+      "readiness": "NOT_ELIGIBLE",
+      "readiness_percentage": 100
+    }
+  },
+  {
+    "username": "noor",
+    "email": "noor@example.test",
+    "scenario": "incomplete",
+    "profile": {
+      "full_name": "Noor Ali",
+      "date_of_birth": "2004-08-05",
+      "state": "Telangana",
+      "revision": 1
+    },
+    "evaluation_date": "2026-09-20",
+    "documents": [],
+    "expected": {
+      "scheme_id": "demo-family-support",
+      "eligibility": "POTENTIALLY_ELIGIBLE",
+      "readiness": "NEEDS_INFORMATION",
+      "readiness_percentage": 37.5
+    }
+  },
+  {
+    "username": "kiran",
+    "email": "kiran@example.test",
+    "scenario": "state_specific",
+    "profile": {
+      "gender": "male",
+      "has_bank_account": true,
+      "employment_status": "unemployed",
+      "occupation": "jobseeker",
+      "state": "Karnataka",
+      "district": "Mysuru",
+      "location_type": "urban",
+      "social_category": "obc",
+      "disability_status": false,
+      "education_level": "graduate",
+      "student_status": false,
+      "marital_status": "single",
+      "revision": 1,
+      "full_name": "Kiran Dev",
+      "date_of_birth": "2003-05-17",
+      "annual_family_income": 100000
+    },
+    "evaluation_date": "2026-09-20",
+    "documents": [
+      {
+        "document_type": "identity_proof",
+        "fields": {
+          "full_name": "Kiran Dev",
+          "date_of_birth": "2003-05-17"
+        },
+        "id": "fixture-1",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Kiran Dev",
+            "document_value": "Kiran Dev",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "date_of_birth",
+            "status": "MATCH",
+            "profile_value": "2003-05-17",
+            "document_value": "2003-05-17",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "income_certificate",
+        "fields": {
+          "full_name": "Kiran Dev",
+          "annual_family_income": 100000
+        },
+        "id": "fixture-2",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Kiran Dev",
+            "document_value": "Kiran Dev",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "annual_family_income",
+            "status": "MATCH",
+            "profile_value": 100000,
+            "document_value": 100000,
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "residence_proof",
+        "fields": {
+          "full_name": "Kiran Dev",
+          "state": "Karnataka"
+        },
+        "id": "fixture-3",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Kiran Dev",
+            "document_value": "Kiran Dev",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "state",
+            "status": "MATCH",
+            "profile_value": "Karnataka",
+            "document_value": "Karnataka",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      }
+    ],
+    "expected": {
+      "scheme_id": "demo-family-support",
+      "eligibility": "ELIGIBLE",
+      "readiness": "READY",
+      "readiness_percentage": 100,
+      "additional_eligibility": {
+        "demo-karnataka-skills": "ELIGIBLE",
+        "demo-telangana-student": "NOT_ELIGIBLE"
+      }
+    }
+  },
+  {
+    "username": "meera",
+    "email": "meera@example.test",
+    "scenario": "document_mismatch",
+    "profile": {
+      "gender": "female",
+      "has_bank_account": true,
+      "employment_status": "employed",
+      "occupation": "tailor",
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "location_type": "urban",
+      "social_category": "obc",
+      "disability_status": false,
+      "education_level": "secondary",
+      "student_status": false,
+      "marital_status": "married",
+      "revision": 1,
+      "full_name": "Meera Shah",
+      "date_of_birth": "1985-03-15",
+      "annual_family_income": 150000
+    },
+    "evaluation_date": "2026-09-20",
+    "documents": [
+      {
+        "document_type": "identity_proof",
+        "fields": {
+          "full_name": "Meera Shah",
+          "date_of_birth": "1985-03-15"
+        },
+        "id": "fixture-1",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Meera Shah",
+            "document_value": "Meera Shah",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "date_of_birth",
+            "status": "MATCH",
+            "profile_value": "1985-03-15",
+            "document_value": "1985-03-15",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      },
+      {
+        "document_type": "income_certificate",
+        "fields": {
+          "full_name": "Meera Shah",
+          "annual_family_income": 120000
+        },
+        "id": "fixture-2",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Meera Shah",
+            "document_value": "Meera Shah",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "annual_family_income",
+            "status": "MISMATCH",
+            "profile_value": 150000,
+            "document_value": 120000,
+            "reason": "Synthetic income intentionally differs from the profile."
+          }
+        ]
+      },
+      {
+        "document_type": "residence_proof",
+        "fields": {
+          "full_name": "Meera Shah",
+          "state": "Telangana"
+        },
+        "id": "fixture-3",
+        "status": "PROCESSED",
+        "corrections": {},
+        "checks": [
+          {
+            "field": "full_name",
+            "status": "MATCH",
+            "profile_value": "Meera Shah",
+            "document_value": "Meera Shah",
+            "reason": "Matches the synthetic profile."
+          },
+          {
+            "field": "state",
+            "status": "MATCH",
+            "profile_value": "Telangana",
+            "document_value": "Telangana",
+            "reason": "Matches the synthetic profile."
+          }
+        ]
+      }
+    ],
+    "expected": {
+      "scheme_id": "demo-family-support",
+      "eligibility": "ELIGIBLE",
+      "readiness": "INCOMPLETE",
+      "readiness_percentage": 77.78,
+      "after_income_correction": {
+        "field": "annual_family_income",
+        "value": 150000,
+        "readiness": "READY",
+        "readiness_percentage": 100
+      }
+    }
+  }
+]

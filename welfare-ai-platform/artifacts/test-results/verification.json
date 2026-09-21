@@ -1,0 +1,100 @@
+[
+  {
+    "check": "backend-tests",
+    "cwd": "backend",
+    "command": [
+      "<PROJECT_ROOT>\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=../runtime/pytest-final",
+      "--junitxml=../artifacts/test-results/backend.xml",
+      "--tb=short"
+    ],
+    "started_at": "2026-09-21T04:11:03.709968+00:00",
+    "finished_at": "2026-09-21T04:11:13.179888+00:00",
+    "exit_code": 1
+  },
+  {
+    "check": "backend-lint",
+    "cwd": "backend",
+    "command": [
+      "<PROJECT_ROOT>\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "app",
+      "tests"
+    ],
+    "started_at": "2026-09-21T04:11:13.181793+00:00",
+    "finished_at": "2026-09-21T04:11:13.435819+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "dependencies",
+    "cwd": ".",
+    "command": [
+      "<PROJECT_ROOT>\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "started_at": "2026-09-21T04:11:13.436797+00:00",
+    "finished_at": "2026-09-21T04:11:21.333985+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "frontend-tests",
+    "cwd": "frontend",
+    "command": [
+      "node",
+      "C:\\Users\\vamsi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\pnpm\\bin\\pnpm.mjs",
+      "test",
+      "--reporter=default",
+      "--reporter=junit",
+      "--outputFile=../artifacts/test-results/frontend.xml"
+    ],
+    "started_at": "2026-09-21T04:11:21.335002+00:00",
+    "finished_at": "2026-09-21T04:12:06.827951+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "frontend-lint",
+    "cwd": "frontend",
+    "command": [
+      "node",
+      "C:\\Users\\vamsi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\pnpm\\bin\\pnpm.mjs",
+      "lint"
+    ],
+    "started_at": "2026-09-21T04:12:06.828917+00:00",
+    "finished_at": "2026-09-21T04:12:33.937241+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "frontend-build",
+    "cwd": "frontend",
+    "command": [
+      "node",
+      "C:\\Users\\vamsi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\pnpm\\bin\\pnpm.mjs",
+      "build"
+    ],
+    "started_at": "2026-09-21T04:12:33.938752+00:00",
+    "finished_at": "2026-09-21T04:12:47.546638+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "browser",
+    "cwd": "frontend",
+    "command": [
+      "node",
+      "C:\\Users\\vamsi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\pnpm\\bin\\pnpm.mjs",
+      "test:e2e"
+    ],
+    "started_at": "2026-09-21T04:12:47.547541+00:00",
+    "finished_at": "2026-09-21T04:13:25.747429+00:00",
+    "exit_code": 0
+  }
+]

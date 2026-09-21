@@ -1,0 +1,62 @@
+name: Core verification
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17.11-alpine
+        env:
+          POSTGRES_USER: welfare
+          POSTGRES_PASSWORD: disposable-ci-database-password
+          POSTGRES_DB: welfare
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U welfare -d welfare"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgresql+psycopg://welfare:disposable-ci-database-password@localhost:5432/welfare
+      APPLICATION_DATABASE_URL: postgresql+psycopg://welfare:disposable-ci-database-password@localhost:5432/welfare
+      TEST_DATABASE_URL: postgresql+psycopg://welfare:disposable-ci-database-password@localhost:5432/welfare_test
+      PGPASSWORD: disposable-ci-database-password
+      DEMO_MODE: 'true'
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/runtime/browsers
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.19.0'
+      - name: Generate temporary CI signing secret
+        run: python -c "import os,secrets; open(os.environ['GITHUB_ENV'],'a').write('JWT_SECRET='+secrets.token_urlsafe(48)+'\n')"
+      - run: pip install -r backend/requirements.txt
+      - run: pnpm --dir frontend install --frozen-lockfile
+      - run: createdb -h localhost -U welfare welfare_test
+      - run: python scripts/setup_model.py
+      - name: Prepare demo backend
+        working-directory: backend
+        run: |
+          python -m alembic upgrade head
+          python -m app.cli seed
+          python -m app.cli index
+      - run: python scripts/setup_browser_admin.py
+      - run: pnpm --dir frontend exec playwright install --with-deps chromium
+      - run: pnpm --dir frontend build
+      - name: Start actual services
+        run: |
+          (cd backend && python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > ../runtime/api-ci.log 2>&1) &
+          (cd frontend && pnpm preview > ../runtime/web-ci.log 2>&1) &
+          python scripts/wait_services.py
+      - run: python scripts/verify.py --real-rag --browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sanitized-verification
+          path: artifacts/test-results/

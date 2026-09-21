@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "demo-family-support",
+    "name": "Demo Family Support",
+    "category": "family",
+    "description": "Clearly fictional academic demonstration scheme. Adults with annual family income at most INR 200,000 and a bank account match these fictional rules.",
+    "benefits": "Demonstration-only annual support of INR 12,000.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Family Support — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-family-support",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Adults with annual family income at most INR 200,000 and a bank account match these fictional rules. Benefit: Demonstration-only annual support of INR 12,000. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "age",
+          "op": ">=",
+          "value": 18,
+          "source": {
+            "reference": "data/schemes.json#demo-family-support",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 200000,
+          "source": {
+            "reference": "data/schemes.json#demo-family-support",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "has_bank_account",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-family-support",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-senior-support",
+    "name": "Demo Senior Support",
+    "category": "pension",
+    "description": "Clearly fictional academic demonstration scheme. Applicants aged 60 or older with annual family income at most INR 300,000 and a bank account match these fictional rules.",
+    "benefits": "Demonstration-only monthly support of INR 1,500.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Senior Support — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-senior-support",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Applicants aged 60 or older with annual family income at most INR 300,000 and a bank account match these fictional rules. Benefit: Demonstration-only monthly support of INR 1,500. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "age",
+          "op": ">=",
+          "value": 60,
+          "source": {
+            "reference": "data/schemes.json#demo-senior-support",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 300000,
+          "source": {
+            "reference": "data/schemes.json#demo-senior-support",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "has_bank_account",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-senior-support",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-student-learning",
+    "name": "Demo Student Learning",
+    "category": "education",
+    "description": "Clearly fictional academic demonstration scheme. Current students aged 16 through 25 inclusive, studying higher secondary, diploma, or graduate education, with annual family income at most INR 250,000 match these fictional rules.",
+    "benefits": "Demonstration-only study materials allowance of INR 8,000 per year.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Student Learning — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-student-learning",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Current students aged 16 through 25 inclusive, studying higher secondary, diploma, or graduate education, with annual family income at most INR 250,000 match these fictional rules. Benefit: Demonstration-only study materials allowance of INR 8,000 per year. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Additional required document types: student_certificate. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "student_status",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-student-learning",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": "between",
+          "value": [
+            16,
+            25
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-student-learning",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 250000,
+          "source": {
+            "reference": "data/schemes.json#demo-student-learning",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "education_level",
+          "op": "in",
+          "value": [
+            "higher_secondary",
+            "diploma",
+            "graduate"
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-student-learning",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "student_status",
+      "education_level"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "student",
+        "any_of": [
+          "student_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "student_status"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-rural-livelihood",
+    "name": "Demo Rural Livelihood",
+    "category": "employment",
+    "description": "Clearly fictional academic demonstration scheme. Rural residents aged 18 through 60 who are unemployed or self-employed and whose annual family income is at most INR 180,000 match these fictional rules.",
+    "benefits": "Demonstration-only vocational preparation course and INR 5,000 materials support.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Rural Livelihood — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-rural-livelihood",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Rural residents aged 18 through 60 who are unemployed or self-employed and whose annual family income is at most INR 180,000 match these fictional rules. Benefit: Demonstration-only vocational preparation course and INR 5,000 materials support. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "location_type",
+          "op": "==",
+          "value": "rural",
+          "source": {
+            "reference": "data/schemes.json#demo-rural-livelihood",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": "between",
+          "value": [
+            18,
+            60
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-rural-livelihood",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "employment_status",
+          "op": "in",
+          "value": [
+            "unemployed",
+            "self_employed"
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-rural-livelihood",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 180000,
+          "source": {
+            "reference": "data/schemes.json#demo-rural-livelihood",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "location_type",
+      "employment_status"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-women-enterprise",
+    "name": "Demo Women Enterprise",
+    "category": "enterprise",
+    "description": "Clearly fictional academic demonstration scheme. Women aged at least 18 working as an artisan, tailor, or small_business, with a bank account and annual family income at most INR 250,000 match these fictional rules.",
+    "benefits": "Demonstration-only enterprise planning grant of INR 20,000.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Women Enterprise — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-women-enterprise",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Women aged at least 18 working as an artisan, tailor, or small_business, with a bank account and annual family income at most INR 250,000 match these fictional rules. Benefit: Demonstration-only enterprise planning grant of INR 20,000. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "gender",
+          "op": "==",
+          "value": "female",
+          "source": {
+            "reference": "data/schemes.json#demo-women-enterprise",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": ">=",
+          "value": 18,
+          "source": {
+            "reference": "data/schemes.json#demo-women-enterprise",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "occupation",
+          "op": "in",
+          "value": [
+            "artisan",
+            "tailor",
+            "small_business"
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-women-enterprise",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "has_bank_account",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-women-enterprise",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 250000,
+          "source": {
+            "reference": "data/schemes.json#demo-women-enterprise",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "gender",
+      "occupation"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-disability-support",
+    "name": "Demo Disability Support",
+    "category": "disability",
+    "description": "Clearly fictional academic demonstration scheme. Adults with disability status true and annual family income at most INR 300,000 match these fictional rules. This fixture encodes no medical percentage threshold.",
+    "benefits": "Demonstration-only accessibility allowance of INR 10,000 per year.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Disability Support — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-disability-support",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Adults with disability status true and annual family income at most INR 300,000 match these fictional rules. This fixture encodes no medical percentage threshold. Benefit: Demonstration-only accessibility allowance of INR 10,000 per year. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Additional required document types: disability_certificate. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "disability_status",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-disability-support",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": ">=",
+          "value": 18,
+          "source": {
+            "reference": "data/schemes.json#demo-disability-support",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 300000,
+          "source": {
+            "reference": "data/schemes.json#demo-disability-support",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "disability_status"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "disability",
+        "any_of": [
+          "disability_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "disability_status"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-telangana-student",
+    "name": "Demo Telangana Student",
+    "category": "education",
+    "description": "Clearly fictional academic demonstration scheme. Telangana residents who are students aged 16 through 30 inclusive and whose annual family income is at most INR 300,000 match these fictional rules.",
+    "benefits": "Demonstration-only regional study allowance of INR 9,000 per year.",
+    "jurisdiction": "Telangana",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Telangana Student — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-telangana-student",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Telangana residents who are students aged 16 through 30 inclusive and whose annual family income is at most INR 300,000 match these fictional rules. Benefit: Demonstration-only regional study allowance of INR 9,000 per year. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Additional required document types: student_certificate. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "state",
+          "op": "==",
+          "value": "Telangana",
+          "source": {
+            "reference": "data/schemes.json#demo-telangana-student",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "student_status",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-telangana-student",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": "between",
+          "value": [
+            16,
+            30
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-telangana-student",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 300000,
+          "source": {
+            "reference": "data/schemes.json#demo-telangana-student",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "student_status"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "student",
+        "any_of": [
+          "student_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "student_status"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-karnataka-skills",
+    "name": "Demo Karnataka Skills",
+    "category": "employment",
+    "description": "Clearly fictional academic demonstration scheme. Karnataka residents aged 18 through 35 inclusive who are unemployed and whose annual family income is at most INR 200,000 match these fictional rules.",
+    "benefits": "Demonstration-only skills course with an INR 6,000 training allowance.",
+    "jurisdiction": "Karnataka",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Karnataka Skills — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-karnataka-skills",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Karnataka residents aged 18 through 35 inclusive who are unemployed and whose annual family income is at most INR 200,000 match these fictional rules. Benefit: Demonstration-only skills course with an INR 6,000 training allowance. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "state",
+          "op": "==",
+          "value": "Karnataka",
+          "source": {
+            "reference": "data/schemes.json#demo-karnataka-skills",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": "between",
+          "value": [
+            18,
+            35
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-karnataka-skills",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "employment_status",
+          "op": "==",
+          "value": "unemployed",
+          "source": {
+            "reference": "data/schemes.json#demo-karnataka-skills",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 200000,
+          "source": {
+            "reference": "data/schemes.json#demo-karnataka-skills",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "employment_status"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-category-education",
+    "name": "Demo Category Education",
+    "category": "education",
+    "description": "Clearly fictional academic demonstration scheme. Current students in SC, ST, or OBC categories with annual family income at most INR 250,000 match these fictional rules.",
+    "benefits": "Demonstration-only textbook allowance of INR 7,000 per year.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Category Education — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-category-education",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Current students in SC, ST, or OBC categories with annual family income at most INR 250,000 match these fictional rules. Benefit: Demonstration-only textbook allowance of INR 7,000 per year. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Additional required document types: student_certificate, category_certificate. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "student_status",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-category-education",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "social_category",
+          "op": "in",
+          "value": [
+            "sc",
+            "st",
+            "obc"
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-category-education",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 250000,
+          "source": {
+            "reference": "data/schemes.json#demo-category-education",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "student_status",
+      "social_category"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "student",
+        "any_of": [
+          "student_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "student_status"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "category",
+        "any_of": [
+          "category_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "social_category"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-housing-preparation",
+    "name": "Demo Housing Preparation",
+    "category": "housing",
+    "description": "Clearly fictional academic demonstration scheme. Urban residents aged at least 21 with annual family income at most INR 150,000 and a bank account match these fictional rules. The fixture makes no claim about property ownership.",
+    "benefits": "Demonstration-only housing preparation workshop and INR 4,000 planning allowance.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Housing Preparation — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-housing-preparation",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Urban residents aged at least 21 with annual family income at most INR 150,000 and a bank account match these fictional rules. The fixture makes no claim about property ownership. Benefit: Demonstration-only housing preparation workshop and INR 4,000 planning allowance. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "age",
+          "op": ">=",
+          "value": 21,
+          "source": {
+            "reference": "data/schemes.json#demo-housing-preparation",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 150000,
+          "source": {
+            "reference": "data/schemes.json#demo-housing-preparation",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "location_type",
+          "op": "==",
+          "value": "urban",
+          "source": {
+            "reference": "data/schemes.json#demo-housing-preparation",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "has_bank_account",
+          "op": "==",
+          "value": true,
+          "source": {
+            "reference": "data/schemes.json#demo-housing-preparation",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "location_type"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-youth-skills",
+    "name": "Demo Youth Skills",
+    "category": "employment",
+    "description": "Clearly fictional academic demonstration scheme. Applicants aged 18 through 29 inclusive, with annual family income at most INR 200,000, who are unemployed OR current students match these fictional rules. A student certificate is required only when student_status is true; an unanswered student status leaves the conditional checklist unresolved.",
+    "benefits": "Demonstration-only career course valued at INR 3,000.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Youth Skills — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-youth-skills",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Applicants aged 18 through 29 inclusive, with annual family income at most INR 200,000, who are unemployed OR current students match these fictional rules. A student certificate is required only when student_status is true; an unanswered student status leaves the conditional checklist unresolved. Benefit: Demonstration-only career course valued at INR 3,000. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Additional required document types: student_certificate. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "age",
+          "op": "between",
+          "value": [
+            18,
+            29
+          ],
+          "source": {
+            "reference": "data/schemes.json#demo-youth-skills",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 200000,
+          "source": {
+            "reference": "data/schemes.json#demo-youth-skills",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "any": [
+            {
+              "field": "employment_status",
+              "op": "==",
+              "value": "unemployed",
+              "source": {
+                "reference": "data/schemes.json#demo-youth-skills",
+                "section": "Fictional eligibility specification"
+              }
+            },
+            {
+              "field": "student_status",
+              "op": "==",
+              "value": true,
+              "source": {
+                "reference": "data/schemes.json#demo-youth-skills",
+                "section": "Fictional eligibility specification"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "student-if-studying",
+        "any_of": [
+          "student_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "student_status"
+        ],
+        "mandatory": true,
+        "condition": {
+          "field": "student_status",
+          "op": "==",
+          "value": true
+        }
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": "demo-widow-transition",
+    "name": "Demo Widow Transition",
+    "category": "family",
+    "description": "Clearly fictional academic demonstration scheme. Women aged at least 18 whose marital status is widowed and whose annual family income is at most INR 200,000 match these fictional rules.",
+    "benefits": "Demonstration-only transition support of INR 11,000 per year.",
+    "jurisdiction": "India",
+    "application_procedure": "Complete the profile, resolve the required document checklist, and download the preparation summary in this prototype. This fictional scheme has no government application process.",
+    "application_url": null,
+    "valid_from": null,
+    "valid_until": null,
+    "source": {
+      "title": "Demo Widow Transition — fictional local specification",
+      "url": null,
+      "reference": "data/schemes.json#demo-widow-transition",
+      "publisher": "Welfare Scheme Assistant academic demo authors",
+      "retrieved_at": null,
+      "effective_date": null,
+      "section": "Fictional eligibility and preparation",
+      "passage": "FICTIONAL DEMONSTRATION ONLY; not an official government scheme. Women aged at least 18 whose marital status is widowed and whose annual family income is at most INR 200,000 match these fictional rules. Benefit: Demonstration-only transition support of INR 11,000 per year. Required identity: identity_proof or birth_certificate showing name and date of birth. Income certificate must show name and annual family income. Residence proof must show name and state. Preparation: complete the profile, upload synthetic documents, resolve inconsistencies, and download the checklist. No application is submitted and no support is actually paid."
+    },
+    "is_fictional": true,
+    "coverage": "complete",
+    "version": 1,
+    "rules": {
+      "all": [
+        {
+          "field": "gender",
+          "op": "==",
+          "value": "female",
+          "source": {
+            "reference": "data/schemes.json#demo-widow-transition",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "marital_status",
+          "op": "==",
+          "value": "widowed",
+          "source": {
+            "reference": "data/schemes.json#demo-widow-transition",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "age",
+          "op": ">=",
+          "value": 18,
+          "source": {
+            "reference": "data/schemes.json#demo-widow-transition",
+            "section": "Fictional eligibility specification"
+          }
+        },
+        {
+          "field": "annual_family_income",
+          "op": "<=",
+          "value": 200000,
+          "source": {
+            "reference": "data/schemes.json#demo-widow-transition",
+            "section": "Fictional eligibility specification"
+          }
+        }
+      ]
+    },
+    "required_fields": [
+      "full_name",
+      "date_of_birth",
+      "annual_family_income",
+      "has_bank_account",
+      "state",
+      "gender",
+      "marital_status"
+    ],
+    "required_documents": [
+      {
+        "id": "identity",
+        "any_of": [
+          "identity_proof",
+          "birth_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "date_of_birth"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "income",
+        "any_of": [
+          "income_certificate"
+        ],
+        "fields": [
+          "full_name",
+          "annual_family_income"
+        ],
+        "mandatory": true
+      },
+      {
+        "id": "residence",
+        "any_of": [
+          "residence_proof"
+        ],
+        "fields": [
+          "full_name",
+          "state"
+        ],
+        "mandatory": true
+      }
+    ],
+    "active": true
+  }
+]

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="5" failures="0" errors="0" time="0.1832283">
+    <testsuite name="src/contracts.test.jsx" timestamp="2026-09-21T04:12:06.731Z" hostname="Vamsi" tests="5" failures="0" errors="0" skipped="0" time="0.1832283">
+        <testcase classname="src/contracts.test.jsx" name="profile values retain their meaning &gt; distinguishes zero, false and unanswered fields" time="0.0038094">
+        </testcase>
+        <testcase classname="src/contracts.test.jsx" name="results remain understandable and safe &gt; shows a failing requirement as failing" time="0.0486996">
+        </testcase>
+        <testcase classname="src/contracts.test.jsx" name="results remain understandable and safe &gt; labels fictional sources and blocks executable URLs" time="0.0172679">
+        </testcase>
+        <testcase classname="src/contracts.test.jsx" name="results remain understandable and safe &gt; makes recoverable failures visible" time="0.1029137">
+        </testcase>
+        <testcase classname="src/contracts.test.jsx" name="results remain understandable and safe &gt; does not present unknown as success" time="0.0047702">
+        </testcase>
+    </testsuite>
+</testsuites>
